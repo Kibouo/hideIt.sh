@@ -419,9 +419,9 @@ function hide_window() {
 
     # Activate the window.
     # Should bring it to the front, change workspace etc.
-    if [ $hide -ne 0 ]; then
-        xdotool windowactivate $WIN_ID > /dev/null 2>&1
-    fi
+    #if [ $hide -ne 0 ]; then
+    #    xdotool windowactivate $WIN_ID > /dev/null 2>&1
+    #fi
 
     # Generate the sequence used to move the window
     local to=()
@@ -487,10 +487,10 @@ function hide_window() {
 
     # In case we hid the window, try to give focus to whatever is
     # underneath the cursor.
-    if [ $hide -eq 0 ]; then
-        eval $(xdotool getmouselocation --shell)
-        xdotool windowactivate $WINDOW > /dev/null 2>&1
-    fi
+    #if [ $hide -eq 0 ]; then
+    #    eval $(xdotool getmouselocation --shell)
+    #    xdotool windowactivate $WINDOW > /dev/null 2>&1
+    #fi
 }
 
 
